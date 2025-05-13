@@ -3,183 +3,213 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Watch the latest TV shows and movies on TV Yami. South African and American series, blockbusters, and more."/>
-  <meta name="keywords" content="TV Yami, South African TV, American TV Shows, Movies, Streaming, Skeem Saam, Ithonga, Empire, Euphoria"/>
-  <meta name="author" content="TV Yami"/>
-  <title>TV Yami - Watch TV Shows and Movies Online</title>
+  <title>TV Yami - Watch Movies and Shows Free</title>
+  <meta name="description" content="Watch free movies and South African & American TV shows on TV Yami. No signup. Just stream and enjoy." />
+  <meta name="keywords" content="TV Yami, free movies, South African TV shows, American series, watch online, Xrepo, Skeem Saam, Euphoria, Empire, BMF" />
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(135deg, #000000, #1c1c1c);
+      background: url('https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=1470&q=80') no-repeat center center fixed;
+      background-size: cover;
       color: #fff;
-      padding: 20px;
+      padding: 40px 20px;
       text-align: center;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .dark-mode {
+      background-color: #121212;
+      background-image: none;
+      color: #eee;
+    }
+
+    .toggle-mode {
+      position: fixed;
+      top: 15px;
+      right: 20px;
+      background: #FFD700;
+      color: #000;
+      padding: 8px 15px;
+      border-radius: 25px;
+      border: none;
+      cursor: pointer;
+      z-index: 999;
+      box-shadow: 0 0 10px #FFD700;
     }
 
     h1 {
       font-size: 48px;
       color: #FFD700;
       text-shadow: 2px 2px #000;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700;
+      }
+      to {
+        text-shadow: 0 0 20px #FFA500, 0 0 30px #FFA500;
+      }
     }
 
     .categories {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 12px;
-      margin-bottom: 30px;
+      gap: 15px;
+      margin: 20px 0 40px;
+    }
+
+    .category, .subcategory {
+      padding: 10px 20px;
+      border-radius: 30px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      transition: all 0.3s;
     }
 
     .category {
-      background-color: #333;
-      color: #fff;
-      border: none;
-      padding: 10px 18px;
-      border-radius: 25px;
-      cursor: pointer;
-      transition: 0.3s;
-      box-shadow: 0 0 8px #FFD70088;
+      background: #ff5722;
+      box-shadow: 0 0 10px #ff5722;
     }
 
     .category:hover {
-      background-color: #FFD700;
+      background: #ff7043;
       color: #000;
     }
 
     .subcategory {
-      background-color: #555;
-      color: #fff;
-      margin-top: 5px;
-      display: inline-block;
-      padding: 8px 14px;
-      border-radius: 18px;
-      font-size: 14px;
-      margin-bottom: 5px;
+      background: #8e24aa;
+      box-shadow: 0 0 10px #8e24aa;
+    }
+
+    .subcategory:hover {
+      background: #ba68c8;
+      color: #000;
     }
 
     .watch-now {
-      background: #FF4500;
+      margin: 20px 0;
+      background: #00C853;
       color: white;
       border: none;
       padding: 15px 30px;
       font-size: 20px;
       border-radius: 8px;
       cursor: pointer;
-      margin-bottom: 40px;
       transition: background 0.3s;
-      box-shadow: 0 0 10px #FF450088;
+      box-shadow: 0 0 10px #00C853;
     }
 
     .watch-now:hover {
-      background: #e03e00;
+      background: #00e676;
+      color: #000;
     }
 
     .section {
-      max-width: 1000px;
-      margin: 30px auto;
+      max-width: 900px;
+      margin: 50px auto 20px;
       text-align: center;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 30px;
+      border-radius: 15px;
     }
 
     .section h2 {
       color: #FFD700;
       margin-bottom: 15px;
-      text-shadow: 1px 1px #000;
     }
 
-    .post-links a {
+    .link-list a {
       display: block;
       background: #222;
       color: #fff;
       padding: 12px;
-      border-radius: 6px;
+      border-radius: 8px;
+      margin: 8px 0;
       text-decoration: none;
-      margin: 8px auto;
-      max-width: 600px;
       transition: background 0.3s;
     }
 
-    .post-links a:hover {
+    .link-list a:hover {
       background: #FFD700;
       color: #000;
     }
 
     .footer {
-      background: #111;
-      color: #aaa;
-      padding: 30px 20px;
       margin-top: 50px;
-      font-size: 14px;
+      padding: 30px;
+      background: rgba(0,0,0,0.7);
+      border-radius: 10px;
+      line-height: 1.6;
+      color: #ccc;
+      font-size: 16px;
     }
 
-    .footer p {
-      margin: 8px 0;
+    .footer strong {
+      color: #FFD700;
     }
 
     @media (max-width: 600px) {
-      h1 {
-        font-size: 32px;
-      }
-
-      .watch-now {
-        font-size: 18px;
-        padding: 12px 25px;
-      }
-
-      .category, .subcategory {
-        font-size: 14px;
-      }
+      h1 { font-size: 32px; }
+      .watch-now { font-size: 18px; padding: 12px 25px; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Adsterra Top Script -->
+  <!-- Dark/Light Mode Toggle -->
+  <button class="toggle-mode" onclick="toggleMode()">🌙 Toggle Mode</button>
+
+  <!-- Adsterra Ads -->
   <script type='text/javascript' src='//pl26630947.profitableratecpm.com/91/50/ce/9150ce4b254464961b06ccaa256200ea.js'></script>
 
   <h1>TV Yami</h1>
 
-  <!-- Main Categories -->
+  <!-- Categories -->
   <div class="categories">
-    <button class="category" onclick="window.location.href='https://tvyami.blogspot.com/search/label/movies?&max-results=6'">Movies</button>
-    <button class="category" onclick="window.location.href='https://tvyami.blogspot.com/search/label/South%20African%20TV%20Shows?&max-results=6'">South African TV Shows</button>
-    <div>
-      <div class="subcategory" onclick="window.location.href='https://tvyami.blogspot.com/search/label/skeemsaam?&max-results=6'">Skeem Saam</div>
-      <div class="subcategory" onclick="window.location.href='https://tvyami.blogspot.com/search/label/ithonga?&max-results=6'">Ithonga</div>
-      <div class="subcategory" onclick="window.location.href='https://tvyami.blogspot.com/search/label/genesis?&max-results=6'">Genesis</div>
-      <div class="subcategory" onclick="window.location.href='https://tvyami.blogspot.com/search/label/xrepo?&max-results=6'">Xrepo</div>
-    </div>
-    <button class="category" onclick="window.location.href='https://tvyami.blogspot.com/search/label/American%20TV%20Shows?&max-results=6'">American TV Shows</button>
-    <button class="category" onclick="window.location.href='https://mzansimovie.blogspot.com/search/label/SERIES?&max-results=6'">Series</button>
+    <a class="category" href="https://tvyami.blogspot.com/search/label/movies?&max-results=6" target="_blank">Movies</a>
+    <a class="category" href="https://mzansimovie.blogspot.com/search/label/SERIES?&max-results=6" target="_blank">Series</a>
+    <a class="category" href="https://tvyami.blogspot.com/search/label/American%20TV%20Shows?&max-results=6" target="_blank">American TV Shows</a>
+    <a class="category" href="https://tvyami.blogspot.com/search/label/South%20African%20TV%20Shows?&max-results=6" target="_blank">South African TV Shows</a>
+  </div>
+
+  <!-- Subcategories -->
+  <div class="categories">
+    <a class="subcategory" href="https://tvyami.blogspot.com/search/label/xrepo?&max-results=6" target="_blank">Xrepo</a>
+    <a class="subcategory" href="https://tvyami.blogspot.com/search/label/skeemsaam?&max-results=6" target="_blank">Skeem Saam</a>
+    <a class="subcategory" href="https://tvyami.blogspot.com/search/label/ithonga?&max-results=6" target="_blank">Ithonga</a>
+    <a class="subcategory" href="https://tvyami.blogspot.com/search/label/genesis?&max-results=6" target="_blank">Genesis</a>
   </div>
 
   <!-- Watch Now Button -->
-  <button class="watch-now" onclick="window.location.href='https://tvyami.blogspot.com/'">
-    🎬 Watch Now
-  </button>
+  <button class="watch-now" onclick="window.open('https://tvyami.blogspot.com/', '_blank')">🎬 Watch Now</button>
 
   <!-- Movie Titles -->
   <div class="section">
-    <h2>Popular Movies</h2>
-    <div class="post-links">
-      <a href="https://mzansimovie.blogspot.com/2025/04/cap.html">Captain America: Brand New (World 2024)</a>
-      <a href="https://mzansimovie.blogspot.com/2025/05/g2o-2025-full-movie-viola-davis.html">G2O 2025 Full Movie - Viola Davis</a>
-      <a href="https://tvyami.blogspot.com/2025/05/all-bright-places-film2020.html">All the Bright Places (film) 2020</a>
-      <a href="https://tvyami.blogspot.com/2025/05/acrimony-2018-full-movie.html">Acrimony 2018 Full Movie</a>
-      <a href="https://tvyami.blogspot.com/2025/04/gangsters-paradise-jerusalema-2008.html">Gangster's Paradise: Jerusalema (2008)</a>
+    <h2>Top Movies</h2>
+    <div class="link-list">
+      <a href="https://mzansimovie.blogspot.com/2025/04/cap.html" target="_blank">Captain America: Brand New World (2024)</a>
+      <a href="https://mzansimovie.blogspot.com/2025/05/g2o-2025-full-movie-viola-davis.html" target="_blank">G2O (2025) - Viola Davis</a>
+      <a href="https://tvyami.blogspot.com/2025/05/all-bright-places-film2020.html" target="_blank">All the Bright Places (2020)</a>
+      <a href="https://tvyami.blogspot.com/2025/05/acrimony-2018-full-movie.html" target="_blank">Acrimony (2018)</a>
+      <a href="https://tvyami.blogspot.com/2025/04/gangsters-paradise-jerusalema-2008.html" target="_blank">Gangster's Paradise: Jerusalema (2008)</a>
     </div>
   </div>
 
-  <!-- American TV Shows Titles -->
+  <!-- American TV Shows -->
   <div class="section">
-    <h2>American TV Shows</h2>
-    <div class="post-links">
-      <a href="https://tvyami.blogspot.com/search/label/empire?&max-results=6">Empire</a>
-      <a href="https://tvyami.blogspot.com/2025/04/euphoria-season-1-episode-1.html">Euphoria</a>
-      <a href="https://tvyami.blogspot.com/2025/04/power-season-1-episode-1.html">POWER</a>
-      <a href="https://tvyami.blogspot.com/search/label/Sistas?&max-results=6">Sistas</a>
-      <a href="https://tvyami.blogspot.com/search/label/BMF?&max-results=6">BMF</a>
+    <h2>Top American TV Shows</h2>
+    <div class="link-list">
+      <a href="https://tvyami.blogspot.com/search/label/empire?&max-results=6" target="_blank">Empire</a>
+      <a href="https://tvyami.blogspot.com/2025/04/euphoria-season-1-episode-1.html" target="_blank">Euphoria</a>
+      <a href="https://tvyami.blogspot.com/2025/04/power-season-1-episode-1.html" target="_blank">Power</a>
+      <a href="https://tvyami.blogspot.com/search/label/Sistas?&max-results=6" target="_blank">Sistas</a>
+      <a href="https://tvyami.blogspot.com/search/label/BMF?&max-results=6" target="_blank">BMF</a>
     </div>
   </div>
 
@@ -189,30 +219,23 @@
     <p>TV Yami brings you the hottest Movies and binge-worthy TV Shows from around the world. From explosive action to heartwarming drama, there's something here for every mood. Stay tuned and never miss a moment of entertainment!</p>
   </div>
 
-  <!-- Ad Box -->
-  <div style="margin: 20px auto;">
-    <script type="text/javascript">
-      atOptions = {
-        'key' : '9fe4ec7851720a430fcc8b0183179c46',
-        'format' : 'iframe',
-        'height' : 60,
-        'width' : 468,
-        'params' : {}
-      };
-    </script>
-    <script type="text/javascript" src="//www.highperformanceformat.com/9fe4ec7851720a430fcc8b0183179c46/invoke.js"></script>
-  </div>
-
-  <!-- Footer -->
+  <!-- Footer Section -->
   <div class="footer">
-    <p><strong>Make a request</strong><br/>
-    Is there a movie or TV show you want to watch on our website?<br/>
-    Let us know by leaving a comment or sending a direct message via IG/Tiktok <strong>@tvyami_sa</strong></p>
+    <p><strong>Make a request:</strong><br/>
+      Is there a movie or TV show you want to watch on our website? Let us know by leaving a comment or sending a direct message via IG/TikTok @tvyami_sa
+    </p>
     <p><strong>Are you a business owner?</strong><br/>
-    Advertise with us so you can reach more people.<br/>
-    Send us a DM on IG/Tiktok <strong>@tvyami_sa</strong></p>
+      Advertise with us and reach more people. Send us a DM on IG/TikTok @tvyami_sa
+    </p>
     <p>© 2025 TV Yami</p>
   </div>
+
+  <!-- Dark Mode Script -->
+  <script>
+    function toggleMode() {
+      document.body.classList.toggle("dark-mode");
+    }
+  </script>
 
 </body>
 </html>
