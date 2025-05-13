@@ -167,6 +167,45 @@
       </div>
     </div>
   </div>
+  <div id="blog-posts">
+  <h2>🔥 Latest Episodes</h2>
+  <div id="posts-container" style="display: flex; flex-wrap: wrap; gap: 20px;"></div>
+</div>
+
+<script>
+  async function loadPosts() {
+    const feedURL = "https://tvyami.blogspot.com/feeds/posts/default?alt=json";
+    try {
+      const response = await fetch(feedURL);
+      const data = await response.json();
+
+      const container = document.getElementById("posts-container");
+      const entries = data.feed.entry || [];
+
+      entries.slice(0, 6).forEach(entry => {
+        const title = entry.title.$t;
+        const link = entry.link.find(l => l.rel === "alternate").href;
+        const thumb = entry.media$thumbnail ? entry.media$thumbnail.url : "https://via.placeholder.com/300x450?text=TV+Yami";
+
+        const postHTML = `
+          <div style="width:150px; text-align:center;">
+            <a href="${link}" target="_blank" style="text-decoration:none; color:white;">
+              <img src="${thumb}" style="width:100%; border-radius:10px;">
+              <p style="margin-top:10px;">${title}</p>
+            </a>
+          </div>
+        `;
+        container.innerHTML += postHTML;
+      });
+    } catch (error) {
+      console.error("Error loading Blogger posts:", error);
+      document.getElementById("posts-container").innerHTML = "<p>Couldn't load posts. Please try again later.</p>";
+    }
+  }
+
+  loadPosts();
+</script>
+
 
   <!-- ✅ ADSTERA AD UNIT 2 (Sidebar or Bottom Box) -->
   <div class="ad-box">
