@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script type='text/javascript' src='//pl26630947.profitableratecpm.com/91/50/ce/9150ce4b254464961b06ccaa256200ea.js'></script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>TV Yami</title>
   <meta name="google-site-verification" content="SxXcwQdqUlWLjt456JwV8YfWjovUXvFl_CIgtUGweD0" />
+  <title>TV Yami</title>
   <style>
     body {
       margin: 0;
@@ -13,40 +12,38 @@
       background: linear-gradient(135deg, #000000, #1c1c1c);
       color: #fff;
       padding: 40px 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      text-align: center;
     }
 
     h1 {
       font-size: 48px;
       color: #FFD700;
       text-shadow: 2px 2px #000;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
     }
 
     .categories {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      margin-bottom: 20px;
-      justify-content: center;
+      margin-top: 20px;
     }
 
     .category {
-      background-color: #333;
-      border-radius: 20px;
+      background-color: #444;
+      color: #fff;
+      border: none;
       padding: 10px 20px;
+      margin: 5px;
+      border-radius: 20px;
       cursor: pointer;
-      font-weight: bold;
       transition: background 0.3s;
     }
 
     .category:hover {
-      background-color: #FF4500;
+      background-color: #FFD700;
+      color: #000;
     }
 
     .watch-now {
+      margin-top: 20px;
       background: #FF4500;
       color: white;
       border: none;
@@ -62,38 +59,54 @@
     }
 
     .section {
-      max-width: 1000px;
-      width: 100%;
-      margin-top: 40px;
+      max-width: 800px;
+      margin: 50px auto;
+      text-align: center;
     }
 
     .section h2 {
       color: #FFD700;
       margin-bottom: 15px;
-      text-align: center;
     }
 
     .movie-gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
       gap: 20px;
+      margin-top: 20px;
     }
 
     .movie {
       border-radius: 10px;
       overflow: hidden;
-      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
     }
 
     .movie img {
       width: 100%;
-      border-radius: 8px;
+      height: auto;
+      display: block;
     }
 
-    .movie p {
-      margin-top: 8px;
-      color: #ccc;
-      font-size: 14px;
+    .blog-posts {
+      margin-top: 40px;
+      text-align: left;
+    }
+
+    .blog-posts a {
+      display: block;
+      background: #222;
+      color: #fff;
+      padding: 15px;
+      border-radius: 8px;
+      text-decoration: none;
+      margin-bottom: 10px;
+      transition: background 0.3s;
+    }
+
+    .blog-posts a:hover {
+      background: #FFD700;
+      color: #000;
     }
 
     @media (max-width: 600px) {
@@ -110,89 +123,88 @@
 </head>
 <body>
 
+  <!-- Adsterra Top Script -->
+  <script type='text/javascript' src='//pl26630947.profitableratecpm.com/91/50/ce/9150ce4b254464961b06ccaa256200ea.js'></script>
+
   <h1>TV Yami</h1>
 
   <!-- Categories -->
   <div class="categories">
-    <div class="category" onclick="filterCategory('All')">All</div>
-    <div class="category" onclick="filterCategory('Soapies')">Soapies</div>
-    <div class="category" onclick="filterCategory('Drama')">Drama</div>
-    <div class="category" onclick="filterCategory('Action')">Action</div>
-    <div class="category" onclick="filterCategory('Comedy')">Comedy</div>
+    <button class="category">Action</button>
+    <button class="category">Drama</button>
+    <button class="category">Comedy</button>
+    <button class="category">Romance</button>
+    <button class="category">Thriller</button>
   </div>
 
-  <!-- Watch Now Button -->
+  <!-- Watch Now -->
   <button class="watch-now" onclick="window.location.href='https://tvyami.blogspot.com/'">
     🎬 Watch Now
   </button>
 
-  <!-- Ad -->
-  <div style="margin-top: 30px;">
+  <!-- WHY TV YAMI -->
+  <div class="section">
+    <h2>Why TV Yami?</h2>
+    <p>TV Yami brings you the hottest Movies and binge-worthy TV Shows from around the world. From explosive action to heartwarming drama, there's something here for every mood. Stay tuned and never miss a moment of entertainment!</p>
+  </div>
+
+  <!-- Ad Box -->
+  <div style="margin: 20px auto;">
     <script type="text/javascript">
       atOptions = {
-        'key' : '648b08532c6ed7134fdd6c1afef9d549',
+        'key' : '9fe4ec7851720a430fcc8b0183179c46',
         'format' : 'iframe',
-        'height' : 250,
-        'width' : 300,
+        'height' : 60,
+        'width' : 468,
         'params' : {}
       };
     </script>
-    <script type="text/javascript" src="//www.highperformanceformat.com/648b08532c6ed7134fdd6c1afef9d549/invoke.js"></script>
+    <script type="text/javascript" src="//www.highperformanceformat.com/9fe4ec7851720a430fcc8b0183179c46/invoke.js"></script>
   </div>
 
-  <!-- Blogger Feed -->
+  <!-- Popular Picks -->
   <div class="section">
-    <h2>🔥 Latest Episodes</h2>
-    <div class="movie-gallery" id="posts-container"></div>
+    <h2>Explore Popular Picks</h2>
+    <div class="movie-gallery">
+      <div class="movie"><img src="https://source.unsplash.com/300x450/?movie,action" alt="Movie 1"></div>
+      <div class="movie"><img src="https://source.unsplash.com/300x450/?movie,comedy" alt="Movie 2"></div>
+      <div class="movie"><img src="https://source.unsplash.com/300x450/?movie,drama" alt="Movie 3"></div>
+      <div class="movie"><img src="https://source.unsplash.com/300x450/?tv,series" alt="TV Show"></div>
+    </div>
+  </div>
+
+  <!-- Blogger Posts -->
+  <div class="section blog-posts">
+    <h2>Latest Releases</h2>
+    <div id="blog-posts">Loading posts...</div>
   </div>
 
   <script>
-    let allPosts = [];
-
-    async function loadPosts(label = '') {
-      const url = label && label !== 'All'
-        ? `https://tvyami.blogspot.com/feeds/posts/default/-/${label}?alt=json`
-        : `https://tvyami.blogspot.com/feeds/posts/default?alt=json`;
-
+    async function loadPosts() {
       try {
-        const response = await fetch(url);
+        const response = await fetch("https://tvyami.blogspot.com/feeds/posts/default?alt=json");
         const data = await response.json();
-        const entries = data.feed.entry || [];
+        const container = document.getElementById("blog-posts");
+        container.innerHTML = "";
 
-        allPosts = entries.map(entry => {
-          const title = entry.title.$t;
-          const link = entry.link.find(l => l.rel === "alternate").href;
-          const thumb = entry.media$thumbnail ? entry.media$thumbnail.url.replace('/s72-c/', '/s320/') : "https://via.placeholder.com/300x450?text=TV+Yami";
-          return { title, link, thumb };
+        const posts = data.feed.entry || [];
+        posts.slice(0, 6).forEach(post => {
+          const title = post.title.$t;
+          const link = post.link.find(l => l.rel === "alternate").href;
+          const a = document.createElement("a");
+          a.href = link;
+          a.target = "_blank";
+          a.textContent = title;
+          container.appendChild(a);
         });
-
-        displayPosts(allPosts);
-      } catch (e) {
-        console.error("Error loading posts", e);
-        document.getElementById("posts-container").innerHTML = "<p>Couldn't load posts.</p>";
+      } catch (error) {
+        document.getElementById("blog-posts").innerText = "Couldn't load posts.";
       }
     }
 
-    function displayPosts(posts) {
-      const container = document.getElementById("posts-container");
-      container.innerHTML = '';
-      posts.slice(0, 12).forEach(post => {
-        container.innerHTML += `
-          <div class="movie">
-            <a href="${post.link}" target="_blank">
-              <img src="${post.thumb}" alt="${post.title}">
-              <p>${post.title}</p>
-            </a>
-          </div>`;
-      });
-    }
-
-    function filterCategory(label) {
-      loadPosts(label);
-    }
-
-    // Load on page load
     loadPosts();
   </script>
+
 </body>
 </html>
+
