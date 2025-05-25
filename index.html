@@ -544,7 +544,12 @@
   </div>
 
   <button class="watch-now" onclick="window.open('https://tvyami.blogspot.com/', '_blank')">🎬 Watch Now</button>
+<button class="watch-now" onclick="showAllVideos()">📺 Show All Videos (A-Z)</button>
 
+<div id="allVideosSection" style="display:none;">
+  <h2 style="color: #FFD700; text-shadow: 1px 1px 3px #000;">All Videos (A-Z)</h2>
+  <div id="allVideosContainer" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin: 20px auto;"></div>
+</div>
   <!-- Google Drive Videos Section (Now First) -->
   <div class="section">
     <h2>Featured Movies</h2>
@@ -552,14 +557,14 @@
       <div class="video-container" onclick="openModal('https://drive.google.com/file/d/1aXNXRaS0bn5V2_wL-IRUoQM8MY_QiAWK/preview', 'A United Kingdom (2017)')">
         <div class="video-title">A United Kingdom (2017)</div>
         <div class="thumbnail-container">
-          <img src="https://m.media-amazon.com/images/M/MV5BMTQ2NjE4NDE2NV5BMl5BanBnXkFtZTgwOTcwNDk5MTI@._V1_FMjpg_UX1000_.jpg" alt="A United Kingdom thumbnail">
+          <img src="https://variety.com/wp-content/uploads/2016/09/a-united-kingdom-tiff.jpg" alt="A United Kingdom thumbnail">
           <div class="play-button"></div>
         </div>
       </div>
       <div class="video-container" onclick="openModal('https://drive.google.com/file/d/1nrvPvVYbPFOnM6E1US3aQgHtq-PONRHY/preview', 'Air (2023)')">
         <div class="video-title">Air (2023)</div>
         <div class="thumbnail-container">
-          <img src="https://m.media-amazon.com/images/M/MV5BOWE1YzQ4YTAtODJlYS00YzJkLTk5NjktOWIyYzFkMjYzMjE2XkEyXkFqcGdeQXVyMTUzOTcyODA5._V1_FMjpg_UX1000_.jpg" alt="Air thumbnail">
+          <img src="https://ntvb.tmsimg.com/assets/p23983959_v_h8_ac.jpg?w=1280&h=720" alt="Air thumbnail">
           <div class="play-button"></div>
         </div>
       </div>
@@ -567,8 +572,7 @@
   </div>
 
   <!-- Mid Ad Position -->
-  <div class="social-ad">
-    <div class="ad-container">
+  <div class="social-ad"
       <script type="text/javascript" src="//www.highperformanceformat.com/9fe4ec7851720a430fcc8b0183179c46/invoke.js"></script>
       <div id="container-9fe4ec7851720a430fcc8b0183179c46"></div>
     </div>
@@ -576,7 +580,7 @@
 
    <!-- YouTube Videos Carousel -->
   <div class="section">
-    <h2>Popular Videos</h2>
+    <h2>Movies from our Youtube channel (subscribe)</h2>
     <div class="carousel">
       <button class="carousel-control prev" onclick="moveCarousel(-1)">❮</button>
       <div class="carousel-inner">
@@ -641,12 +645,12 @@
 
   <!-- More Google Drive Videos -->
   <div class="section">
-    <h2>Premium Movies</h2>
+    <h2>TV Yami Movies</h2>
     <div class="video-section">
       <div class="video-container" onclick="openModal('https://drive.google.com/file/d/1DYLjdSdqLmFj9vlgjJXldQ0aPXskTFyE/preview', 'American Fiction (2023)')">
         <div class="video-title">American Fiction (2023)</div>
         <div class="thumbnail-container">
-          <img src="https://m.media-amazon.com/images/M/MV5BZjNlNGU0NjAtNjM5NC00ZmY3LWE3NTItYjE0YzQyMGM2OTNhXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_FMjpg_UX1000_.jpg" alt="American Fiction thumbnail">
+          <img src="https://www.thebanner.org/sites/default/files/styles/article_detail_header/public/2024-02/american-fiction.jpg?itok=rx_8zAPo" alt="American Fiction thumbnail">
           <div class="play-button"></div>
         </div>
       </div>
@@ -657,29 +661,41 @@
           <div class="play-button"></div>
         </div>
       </div>
-    </div>
+       <div class="video-container" onclick="openModal('https://drive.google.com/file/d/1OnhPStBGagxz2V__6yas_uDooLmcdBZF/preview', 'Attack the Block (2011)')">
+  <div class="video-title">Attack the Block (2011)</div>
+  <div class="thumbnail-container">
+    <img src="https://m.media-amazon.com/images/M/MV5BMjAzNjc1MjgzOF5BMl5BanBnXkFtZTcwMzE3Njk5NQ@@._V1_FMjpg_UX1000_.jpg" alt="Attack the Block thumbnail" onerror="this.src='https://via.placeholder.com/300x450?text=No+Thumbnail'">
+    <div class="play-button"></div>
   </div>
-
-  <!-- Content Previews -->
-  <div class="section">
-    <h2>New Releases</h2>
-    <div class="content-preview">
-      <div class="preview-item" onclick="openModal('https://drive.google.com/file/d/1sHWOEhixlQ6Q3cMAQMff8E3TL-Jm9lDk/preview', 'Dear Basketball')">
-        <img src="https://m.media-amazon.com/images/M/MV5BMTU1NzY5NTY0MV5BMl5BanBnXkFtZTgwMjM2NzM5NDM@._V1_FMjpg_UX1000_.jpg" class="preview-thumbnail" alt="Dear Basketball">
-        <div class="preview-title">Dear Basketball</div>
-      </div>
-      <div class="preview-item" onclick="openModal('https://drive.google.com/file/d/1KBaW16hSXnKrs6OCHssXK5m1RyD2FE0K/preview', 'Dangerous Lies')">
-        <img src="https://m.media-amazon.com/images/M/MV5BNzU0YjI0OGItYTlkYi00YTE5LTk4NWMtM2I3NDQ1YzQyYzI2XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_FMjpg_UX1000_.jpg" class="preview-thumbnail" alt="Dangerous Lies">
-        <div class="preview-title">Dangerous Lies</div>
-      </div>
-      <div class="preview-item" onclick="openModal('https://www.youtube.com/embed/ZUG3jxb9bFM?autoplay=1', 'Killer Body')">
-        <img src="https://i.ytimg.com/vi/ZUG3jxb9bFM/maxresdefault.jpg" class="preview-thumbnail" alt="Killer Body">
-        <div class="preview-title">Killer Body</div>
-      </div>
-      <div class="preview-item" onclick="openModal('https://www.youtube.com/embed/XiImoJwpfJ8?autoplay=1', 'The Perfect Find')">
-        <img src="https://i.ytimg.com/vi/XiImoJwpfJ8/maxresdefault.jpg" class="preview-thumbnail" alt="The Perfect Find">
-        <div class="preview-title">The Perfect Find</div>
-      </div>
+</div>
+        <div class="video-container" onclick="openModal('https://drive.google.com/file/d/1TDh2-32YW71r9duHgtlJyikEtPDbN5vT/preview'>
+  <div class="video-title">Barbarian (2022)</div>
+  <div class="thumbnail-container">
+    <img src="https://resizing.flixster.com/Ym6ucXdlZjGTqRWEMVr0r3H16Ro=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzA3ZGY2MjgxLTI1NjEtNGFhMC1iYzQ0LTllOGFhYTczNzYxNy5qcGc=" alt="Barbarian thumbnail" onerror="this.src='https://via.placeholder.com/300x450?text=No+Thumbnail'">
+    <div class="play-button"></div>
+  </div>
+</div>
+       <div class="video-container" onclick="openModal('https://drive.google.com/file/d/1mnh3rFhszbSp1a3EOqDJTipTyj0a8t0E/preview', 'Batman (2022)')">
+  <div class="video-title">Batman (2022)</div>
+  <div class="thumbnail-container">
+    <img src="https://m.media-amazon.com/images/M/MV5BMmU5NGJlMzAtMGNmOC00YjJjLTgyMzUtNjAyYmE4Njg5YWMyXkEyXkFqcGc@._V1_.jpg" alt="Batman thumbnail" onerror="this.src='https://via.placeholder.com/300x450?text=No+Thumbnail'">
+    <div class="play-button"></div>
+  </div>
+</div>
+      <div class="video-container" onclick="openModal('https://drive.google.com/file/d/1zxf_WQQ9VRBIIu0cudkzmNV1yR7bU8Ah/preview', 'Becoming Michelle Obama (2020)')">
+  <div class="video-title">Becoming Michelle Obama (2020)</div>
+  <div class="thumbnail-container">
+    <img src="https://i0.wp.com/finessetosuccess.com/wp-content/uploads/2020/05/Becoming-Netflix-Poster.jpeg?resize=1000%2C608&ssl=1" alt="Becoming Michelle Obama thumbnail" onerror="this.src='https://via.placeholder.com/300x450?text=No+Thumbnail'">
+    <div class="play-button"></div>
+  </div>
+</div>
+      <div class="video-container" onclick="openModal('https://drive.google.com/file/d/1Zhqc91jNSFW3vpaER2U-V4UcEgovF9F2/preview', 'Belle (2013)')">
+  <div class="video-title">Belle (2013)</div>
+  <div class="thumbnail-container">
+    <img src="https://flixchatter.net/wp-content/uploads/2013/11/belle_filmposter.jpg" alt="Belle thumbnail" onerror="this.src='https://via.placeholder.com/300x450?text=No+Thumbnail'">
+    <div class="play-button"></div>
+  </div>
+</div>
     </div>
   </div>
 
@@ -689,7 +705,6 @@
   </div>
 
   <!-- Bottom Ad Position -->
-  <div class="ad-container">
     <script type='text/javascript' src='//pl26640661.profitableratecpm.com/32/da/24/32da24bbb349b1c40dc2190cabe48290.js'></script>
   </div>
 
@@ -902,6 +917,41 @@
         }
       });
     });
+    function showAllVideos() {
+  // Hide other sections
+  document.querySelectorAll('.section').forEach(section => {
+    section.style.display = 'none';
+  });
+  
+  // Show all videos section
+  const allVideosSection = document.getElementById('allVideosSection');
+  allVideosSection.style.display = 'block';
+  
+  // Populate videos if empty
+  const container = document.getElementById('allVideosContainer');
+  if (container.children.length === 0) {
+    contentDatabase
+      .filter(video => video.url.includes('youtube.com') || video.url.includes('drive.google.com'))
+      .sort((a,b) => a.title.localeCompare(b.title))
+      .forEach(video => {
+        const videoItem = document.createElement('div');
+        videoItem.style.width = '150px';
+        videoItem.style.cursor = 'pointer';
+        videoItem.innerHTML = `
+          <img src="${video.url.includes('youtube.com') 
+            ? 'https://i.ytimg.com/vi/'+video.url.split('/embed/')[1].split('?')[0]+'/maxresdefault.jpg' 
+            : 'https://via.placeholder.com/300x450?text=No+Thumbnail'}" 
+            style="width:100%; height:200px; object-fit:cover; border-radius:8px; border:2px solid #FF4500;"
+            onerror="this.src='https://via.placeholder.com/300x450?text=No+Thumbnail'">
+          <div style="margin-top:8px; font-size:14px; color:#FFD700; text-align:center;">
+            ${video.title} (${video.year})
+          </div>
+        `;
+        videoItem.onclick = () => openModal(video.url, `${video.title} (${video.year})`);
+        container.appendChild(videoItem);
+      });
+  }
+}
   </script>
 </body>
 </html>
