@@ -578,126 +578,139 @@
     </div>
   </div>
 
-   <!-- YouTube Videos Carousel -->
-  <div class="section">
-    <h2>Movies from our Youtube channel (subscribe)</h2>
-    <div class="carousel">
-      <button class="carousel-control prev" onclick="moveCarousel(-1)">❮</button>
-      <div class="carousel-inner">
-        <div class="carousel-item">
-          <div class="video-container" onclick="openModal('https://www.youtube.com/embed/ZUG3jxb9bFM?autoplay=1')">
-            <div class="video-title">Big Fish & Begonia (2016) Full Movie</div>
-            <div class="thumbnail-container">
-              <img src="https://i.ytimg.com/vi/ZUG3jxb9bFM/maxresdefault.jpg" alt="Killer Body thumbnail">
-              <div class="play-button"></div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="video-container" onclick="openModal('https://www.youtube.com/embed/XiImoJwpfJ8?autoplay=1')">
-            <div class="video-title">The Great Santini (1979) Full Movie</div>
-            <div class="thumbnail-container">
-              <img src="https://i.ytimg.com/vi/XiImoJwpfJ8/maxresdefault.jpg" alt="The Perfect Find thumbnail">
-              <div class="play-button"></div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="video-container" onclick="openModal('https://www.youtube.com/embed/LOwyDHQzLQs?autoplay=1')">
-            <div class="video-title">The Devils Female (1974) Full Movie</div>
-            <div class="thumbnail-container">
-              <img src="https://i.ytimg.com/vi/LOwyDHQzLQs/maxresdefault.jpg" alt="The Tutor thumbnail">
-              <div class="play-button"></div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="video-container" onclick="openModal('https://www.youtube.com/embed/L3dIFNw7XVI?autoplay=1')">
-            <div class="video-title">Parallel (2024) Full Movie</div>
-            <div class="thumbnail-container">
-              <img src="https://i.ytimg.com/vi/L3dIFNw7XVI/maxresdefault.jpg" alt="The Locksmith thumbnail">
-              <div class="play-button"></div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="video-container" onclick="openModal('https://www.youtube.com/embed/GrNNglupZPA?autoplay=1')">
-            <div class="video-title">Claudine (1974) Full Movie</div>
-            <div class="thumbnail-container">
-              <img src="https://i.ytimg.com/vi/GrNNglupZPA/maxresdefault.jpg" alt="The Ritual Killer thumbnail">
-              <div class="play-button"></div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="video-container" onclick="openModal('https://www.youtube.com/embed/wkqKnmWbzLw?autoplay=1')">
-            <div class="video-title">Robbin (2024) Full Movie</div>
-            <div class="thumbnail-container">
-              <img src="https://i.ytimg.com/vi/wkqKnmWbzLw/maxresdefault.jpg" alt="Beautiful Disaster thumbnail">
-              <div class="play-button"></div>
-            </div>
+ <!-- YouTube Videos Carousel -->
+<div class="section" onclick="window.open('https://youtube.com/@tvyami_sa?si=ugctEa3mlEYTPY3L', '_blank')" style="cursor: pointer; position: relative;">
+  <div style="position: absolute; top: 10px; right: 10px; color: var(--secondary-color); font-size: 14px;">
+    (Click anywhere to visit our channel)
+  </div>
+  <h2>Movies from our YouTube channel (subscribe)</h2>
+  <div class="carousel">
+    <button class="carousel-control prev" onclick="event.stopPropagation(); moveCarousel(-1)">❮</button>
+    <div class="carousel-inner" onclick="event.stopPropagation()">
+      <div class="carousel-item">
+        <div class="video-container" onclick="event.stopPropagation(); openModal('https://www.youtube.com/embed/ZUG3jxb9bFM?autoplay=1', 'Big Fish & Begonia (2016) Full Movie')">
+          <div class="video-title">Big Fish & Begonia (2016) Full Movie</div>
+          <div class="thumbnail-container">
+            <img src="https://i.ytimg.com/vi/ZUG3jxb9bFM/maxresdefault.jpg" alt="Big Fish & Begonia thumbnail" onerror="this.src='https://via.placeholder.com/300x450?text=No+Thumbnail'">
+            <div class="play-button"></div>
           </div>
         </div>
       </div>
-      <button class="carousel-control next" onclick="moveCarousel(1)">❯</button>
+      <div class="carousel-item">
+        <div class="video-container" onclick="event.stopPropagation(); openModal('https://www.youtube.com/embed/XiImoJwpfJ8?autoplay=1', 'The Great Santini (1979) Full Movie')">
+          <div class="video-title">The Great Santini (1979) Full Movie</div>
+          <div class="thumbnail-container">
+            <img src="https://i.ytimg.com/vi/XiImoJwpfJ8/maxresdefault.jpg" alt="The Great Santini thumbnail" onerror="this.src='https://via.placeholder.com/300x450?text=No+Thumbnail'">
+            <div class="play-button"></div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="video-container" onclick="event.stopPropagation(); openModal('https://www.youtube.com/embed/LOwyDHQzLQs?autoplay=1', 'The Devils Female (1974) Full Movie')">
+          <div class="video-title">The Devils Female (1974) Full Movie</div>
+          <div class="thumbnail-container">
+            <img src="https://i.ytimg.com/vi/LOwyDHQzLQs/maxresdefault.jpg" alt="The Devils Female thumbnail" onerror="this.src='https://via.placeholder.com/300x450?text=No+Thumbnail'">
+            <div class="play-button"></div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="video-container" onclick="event.stopPropagation(); openModal('https://www.youtube.com/embed/L3dIFNw7XVI?autoplay=1', 'Parallel (2024) Full Movie')">
+          <div class="video-title">Parallel (2024) Full Movie</div>
+          <div class="thumbnail-container">
+            <img src="https://i.ytimg.com/vi/L3dIFNw7XVI/maxresdefault.jpg" alt="Parallel thumbnail" onerror="this.src='https://via.placeholder.com/300x450?text=No+Thumbnail'">
+            <div class="play-button"></div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="video-container" onclick="event.stopPropagation(); openModal('https://www.youtube.com/embed/GrNNglupZPA?autoplay=1', 'Claudine (1974) Full Movie')">
+          <div class="video-title">Claudine (1974) Full Movie</div>
+          <div class="thumbnail-container">
+            <img src="https://i.ytimg.com/vi/GrNNglupZPA/maxresdefault.jpg" alt="Claudine thumbnail" onerror="this.src='https://via.placeholder.com/300x450?text=No+Thumbnail'">
+            <div class="play-button"></div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="video-container" onclick="event.stopPropagation(); openModal('https://www.youtube.com/embed/wkqKnmWbzLw?autoplay=1', 'Robbin (2024) Full Movie')">
+          <div class="video-title">Robbin (2024) Full Movie</div>
+          <div class="thumbnail-container">
+            <img src="https://i.ytimg.com/vi/wkqKnmWbzLw/maxresdefault.jpg" alt="Robbin thumbnail" onerror="this.src='https://via.placeholder.com/300x450?text=No+Thumbnail'">
+            <div class="play-button"></div>
+          </div>
+        </div>
+      </div>
     </div>
+    <button class="carousel-control next" onclick="event.stopPropagation(); moveCarousel(1)">❯</button>
   </div>
+</div>
 
-  <!-- More Google Drive Videos -->
-  <div class="section">
-    <h2>TV Yami Movies</h2>
-    <div class="video-section">
-      <div class="video-container" onclick="openModal('https://drive.google.com/file/d/1DYLjdSdqLmFj9vlgjJXldQ0aPXskTFyE/preview', 'American Fiction (2023)')">
-        <div class="video-title">American Fiction (2023)</div>
-        <div class="thumbnail-container">
-          <img src="https://www.thebanner.org/sites/default/files/styles/article_detail_header/public/2024-02/american-fiction.jpg?itok=rx_8zAPo" alt="American Fiction thumbnail">
-          <div class="play-button"></div>
-        </div>
+ <!-- More Google Drive Videos -->
+<div class="section">
+  <h2>TV Yami Movies</h2>
+  <div class="video-section" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;">
+
+    <!-- Row 1 -->
+    <div class="video-container" onclick="openModal('https://drive.google.com/file/d/1DYLjdSdqLmFj9vlgjJXldQ0aPXskTFyE/preview', 'American Fiction (2023)')">
+      <div class="thumbnail-container">
+        <img src="https://www.thebanner.org/sites/default/files/styles/article_detail_header/public/2024-02/american-fiction.jpg?itok=rx_8zAPo" alt="American Fiction" style="width:100%">
+        <div class="play-button"></div>
       </div>
-      <div class="video-container" onclick="openModal('https://drive.google.com/file/d/1OXJDBvhdJ6WjwVVelQ16k2prXKxRrQrn/preview', 'Amsterdam (2023)')">
-        <div class="video-title">Amsterdam (2023)</div>
-        <div class="thumbnail-container">
-          <img src="https://m.media-amazon.com/images/M/MV5BNDQwNzE0ZTItYmZjMC00NjI3LWFlNzctNTExZDY2NWE0Zjc0XkEyXkFqcGdeQXVyMTA3MDk2NDg2._V1_FMjpg_UX1000_.jpg" alt="Amsterdam thumbnail">
-          <div class="play-button"></div>
-        </div>
-      </div>
-       <div class="video-container" onclick="openModal('https://drive.google.com/file/d/1OnhPStBGagxz2V__6yas_uDooLmcdBZF/preview', 'Attack the Block (2011)')">
-  <div class="video-title">Attack the Block (2011)</div>
-  <div class="thumbnail-container">
-    <img src="https://m.media-amazon.com/images/M/MV5BMjAzNjc1MjgzOF5BMl5BanBnXkFtZTcwMzE3Njk5NQ@@._V1_FMjpg_UX1000_.jpg" alt="Attack the Block thumbnail" onerror="this.src='https://via.placeholder.com/300x450?text=No+Thumbnail'">
-    <div class="play-button"></div>
-  </div>
-</div>
-        <div class="video-container" onclick="openModal('https://drive.google.com/file/d/1TDh2-32YW71r9duHgtlJyikEtPDbN5vT/preview'>
-  <div class="video-title">Barbarian (2022)</div>
-  <div class="thumbnail-container">
-    <img src="https://resizing.flixster.com/Ym6ucXdlZjGTqRWEMVr0r3H16Ro=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzA3ZGY2MjgxLTI1NjEtNGFhMC1iYzQ0LTllOGFhYTczNzYxNy5qcGc=" alt="Barbarian thumbnail" onerror="this.src='https://via.placeholder.com/300x450?text=No+Thumbnail'">
-    <div class="play-button"></div>
-  </div>
-</div>
-       <div class="video-container" onclick="openModal('https://drive.google.com/file/d/1mnh3rFhszbSp1a3EOqDJTipTyj0a8t0E/preview', 'Batman (2022)')">
-  <div class="video-title">Batman (2022)</div>
-  <div class="thumbnail-container">
-    <img src="https://m.media-amazon.com/images/M/MV5BMmU5NGJlMzAtMGNmOC00YjJjLTgyMzUtNjAyYmE4Njg5YWMyXkEyXkFqcGc@._V1_.jpg" alt="Batman thumbnail" onerror="this.src='https://via.placeholder.com/300x450?text=No+Thumbnail'">
-    <div class="play-button"></div>
-  </div>
-</div>
-      <div class="video-container" onclick="openModal('https://drive.google.com/file/d/1zxf_WQQ9VRBIIu0cudkzmNV1yR7bU8Ah/preview', 'Becoming Michelle Obama (2020)')">
-  <div class="video-title">Becoming Michelle Obama (2020)</div>
-  <div class="thumbnail-container">
-    <img src="https://i0.wp.com/finessetosuccess.com/wp-content/uploads/2020/05/Becoming-Netflix-Poster.jpeg?resize=1000%2C608&ssl=1" alt="Becoming Michelle Obama thumbnail" onerror="this.src='https://via.placeholder.com/300x450?text=No+Thumbnail'">
-    <div class="play-button"></div>
-  </div>
-</div>
-      <div class="video-container" onclick="openModal('https://drive.google.com/file/d/1Zhqc91jNSFW3vpaER2U-V4UcEgovF9F2/preview', 'Belle (2013)')">
-  <div class="video-title">Belle (2013)</div>
-  <div class="thumbnail-container">
-    <img src="https://flixchatter.net/wp-content/uploads/2013/11/belle_filmposter.jpg" alt="Belle thumbnail" onerror="this.src='https://via.placeholder.com/300x450?text=No+Thumbnail'">
-    <div class="play-button"></div>
-  </div>
-</div>
+      <div class="video-title">American Fiction (2023)</div>
     </div>
+
+    <div class="video-container" onclick="openModal('https://drive.google.com/file/d/1OXJDBvhdJ6WjwVVelQ16k2prXKxRrQrn/preview', 'Amsterdam (2023)')">
+      <div class="thumbnail-container">
+        <img src="https://m.media-amazon.com/images/M/MV5BNDQwNzE0ZTItYmZjMC00NjI3LWFlNzctNTExZDY2NWE0Zjc0XkEyXkFqcGdeQXVyMTA3MDk2NDg2._V1_FMjpg_UX1000_.jpg" alt="Amsterdam" style="width:100%">
+        <div class="play-button"></div>
+      </div>
+      <div class="video-title">Amsterdam (2023)</div>
+    </div>
+
+    <div class="video-container" onclick="openModal('https://drive.google.com/file/d/1OnhPStBGagxz2V__6yas_uDooLmcdBZF/preview', 'Attack the Block (2011)')">
+      <div class="thumbnail-container">
+        <img src="https://m.media-amazon.com/images/M/MV5BMjAzNjc1MjgzOF5BMl5BanBnXkFtZTcwMzE3Njk5NQ@@._V1_FMjpg_UX1000_.jpg" alt="Attack the Block" style="width:100%">
+        <div class="play-button"></div>
+      </div>
+      <div class="video-title">Attack the Block (2011)</div>
+    </div>
+
+    <div class="video-container" onclick="openModal('https://drive.google.com/file/d/1TDh2-32YW71r9duHgtlJyikEtPDbN5vT/preview', 'Barbarian (2022)')">
+      <div class="thumbnail-container">
+        <img src="https://resizing.flixster.com/Ym6ucXdlZjGTqRWEMVr0r3H16Ro=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzA3ZGY2MjgxLTI1NjEtNGFhMC1iYzQ0LTllOGFhYTczNzYxNy5qcGc=" alt="Barbarian" style="width:100%">
+        <div class="play-button"></div>
+      </div>
+      <div class="video-title">Barbarian (2022)</div>
+    </div>
+
+    <!-- Row 2 -->
+    <div class="video-container" onclick="openModal('https://drive.google.com/file/d/1mnh3rFhszbSp1a3EOqDJTipTyj0a8t0E/preview', 'Batman (2022)')">
+      <div class="thumbnail-container">
+        <img src="https://m.media-amazon.com/images/M/MV5BMmU5NGJlMzAtMGNmOC00YjJjLTgyMzUtNjAyYmE4Njg5YWMyXkEyXkFqcGc@._V1_.jpg" alt="Batman" style="width:100%">
+        <div class="play-button"></div>
+      </div>
+      <div class="video-title">Batman (2022)</div>
+    </div>
+
+    <div class="video-container" onclick="openModal('https://drive.google.com/file/d/1zxf_WQQ9VRBIIu0cudkzmNV1yR7bU8Ah/preview', 'Becoming Michelle Obama (2020)')">
+      <div class="thumbnail-container">
+        <img src="https://i0.wp.com/finessetosuccess.com/wp-content/uploads/2020/05/Becoming-Netflix-Poster.jpeg?resize=1000%2C608&ssl=1" alt="Becoming Michelle Obama" style="width:100%">
+        <div class="play-button"></div>
+      </div>
+      <div class="video-title">Becoming Michelle Obama (2020)</div>
+    </div>
+
+    <div class="video-container" onclick="openModal('https://drive.google.com/file/d/1Zhqc91jNSFW3vpaER2U-V4UcEgovF9F2/preview', 'Belle (2013)')">
+      <div class="thumbnail-container">
+        <img src="https://flixchatter.net/wp-content/uploads/2013/11/belle_filmposter.jpg" alt="Belle" style="width:100%">
+        <div class="play-button"></div>
+      </div>
+      <div class="video-title">Belle (2013)</div>
+    </div>
+
   </div>
+</div>
 
   <div class="section">
     <h2>Why TV Yami?</h2>
@@ -744,24 +757,95 @@
     });
 
     // Content database for search
-    const contentDatabase = [
-      { title: "A United Kingdom", year: "2017", url: "https://drive.google.com/file/d/1aXNXRaS0bn5V2_wL-IRUoQM8MY_QiAWK/preview", type: "movie" },
-      { title: "Air", year: "2023", url: "https://drive.google.com/file/d/1nrvPvVYbPFOnM6E1US3aQgHtq-PONRHY/preview", type: "movie" },
-      { title: "Killer Body", year: "2023", url: "https://www.youtube.com/embed/ZUG3jxb9bFM?autoplay=1", type: "movie" },
-      { title: "The Perfect Find", year: "2023", url: "https://www.youtube.com/embed/XiImoJwpfJ8?autoplay=1", type: "movie" },
-      { title: "The Tutor", year: "2023", url: "https://www.youtube.com/embed/LOwyDHQzLQs?autoplay=1", type: "movie" },
-      { title: "The Locksmith", year: "2023", url: "https://www.youtube.com/embed/L3dIFNw7XVI?autoplay=1", type: "movie" },
-      { title: "The Ritual Killer", year: "2023", url: "https://www.youtube.com/embed/GrNNglupZPA?autoplay=1", type: "movie" },
-      { title: "Beautiful Disaster", year: "2023", url: "https://www.youtube.com/embed/wkqKnmWbzLw?autoplay=1", type: "movie" },
-      { title: "American Fiction", year: "2023", url: "https://drive.google.com/file/d/1DYLjdSdqLmFj9vlgjJXldQ0aPXskTFyE/preview", type: "movie" },
-      { title: "Amsterdam", year: "2023", url: "https://drive.google.com/file/d/1OXJDBvhdJ6WjwVVelQ16k2prXKxRrQrn/preview", type: "movie" },
-      { title: "Dear Basketball", year: "2017", url: "https://drive.google.com/file/d/1sHWOEhixlQ6Q3cMAQMff8E3TL-Jm9lDk/preview", type: "movie" },
-      { title: "Dangerous Lies", year: "2020", url: "https://drive.google.com/file/d/1KBaW16hSXnKrs6OCHssXK5m1RyD2FE0K/preview", type: "movie" },
-      { title: "Skeem Saam", year: "2023", url: "https://tvyami.blogspot.com/search/label/skeemsaam", type: "series" },
-      { title: "Ithonga", year: "2023", url: "https://tvyami.blogspot.com/search/label/ithonga", type: "series" },
-      { title: "Genesis", year: "2023", url: "https://tvyami.blogspot.com/search/label/genesis", type: "series" },
-      { title: "Xrepo", year: "2023", url: "https://tvyami.blogspot.com/search/label/xrepo", type: "series" }
-    ];
+  const contentDatabase = [
+  // Google Drive Movies (with corrected titles)
+  { 
+    title: "A United Kingdom (2017)", 
+    url: "https://drive.google.com/file/d/1aXNXRaS0bn5V2_wL-IRUoQM8MY_QiAWK/preview", 
+    type: "movie" 
+  },
+  { 
+    title: "Air (2023)", 
+    url: "https://drive.google.com/file/d/1nrvPvVYbPFOnM6E1US3aQgHtq-PONRHY/preview", 
+    type: "movie" 
+  },
+  
+  // YouTube Movies (with corrected titles)
+  { 
+    title: "Big Fish & Begonia (2016)",  // Changed from "Killer Body"
+    url: "https://www.youtube.com/embed/ZUG3jxb9bFM?autoplay=1", 
+    type: "movie" 
+  },
+  { 
+    title: "The Great Santini (1979)",  // Changed from "The Perfect Find"
+    url: "https://www.youtube.com/embed/XiImoJwpfJ8?autoplay=1", 
+    type: "movie" 
+  },
+  { 
+    title: "The Devils Female (1974)",  // Changed from "The Tutor"
+    url: "https://www.youtube.com/embed/LOwyDHQzLQs?autoplay=1", 
+    type: "movie" 
+  },
+  { 
+    title: "Parallel (2024)",  // Changed from "The Locksmith"
+    url: "https://www.youtube.com/embed/L3dIFNw7XVI?autoplay=1", 
+    type: "movie" 
+  },
+  { 
+    title: "Claudine (1974)",  // Changed from "The Ritual Killer"
+    url: "https://www.youtube.com/embed/GrNNglupZPA?autoplay=1", 
+    type: "movie" 
+  },
+  { 
+    title: "Robbin (2024)",  // Changed from "Beautiful Disaster"
+    url: "https://www.youtube.com/embed/wkqKnmWbzLw?autoplay=1", 
+    type: "movie" 
+  },
+  
+  // More Google Drive Movies
+  { 
+    title: "American Fiction (2023)", 
+    url: "https://drive.google.com/file/d/1DYLjdSdqLmFj9vlgjJXldQ0aPXskTFyE/preview", 
+    type: "movie" 
+  },
+  { 
+    title: "Amsterdam (2023)", 
+    url: "https://drive.google.com/file/d/1OXJDBvhdJ6WjwVVelQ16k2prXKxRrQrn/preview", 
+    type: "movie" 
+  },
+  { 
+    title: "Dear Basketball (2017)", 
+    url: "https://drive.google.com/file/d/1sHWOEhixlQ6Q3cMAQMff8E3TL-Jm9lDk/preview", 
+    type: "movie" 
+  },
+  { 
+    title: "Dangerous Lies (2020)", 
+    url: "https://drive.google.com/file/d/1KBaW16hSXnKrs6OCHssXK5m1RyD2FE0K/preview", 
+    type: "movie" 
+  },
+  
+  // TV Series
+  { 
+    title: "Skeem Saam (2023)", 
+    url: "https://tvyami.blogspot.com/search/label/skeemsaam", 
+    type: "series" 
+  },
+  { 
+    title: "Ithonga (2023)", 
+    url: "https://tvyami.blogspot.com/search/label/ithonga", 
+    type: "series" 
+  },
+  { 
+    title: "Genesis (2023)", 
+    url: "https://tvyami.blogspot.com/search/label/genesis", 
+    type: "series" 
+  },
+  { 
+    title: "Xrepo (2023)", 
+    url: "https://tvyami.blogspot.com/search/label/xrepo", 
+    type: "series" 
+  }
+];
 
     // Search functionality
     const searchInput = document.getElementById('searchInput');
@@ -924,8 +1008,41 @@
   });
   
   // Show all videos section
-  const allVideosSection = document.getElementById('allVideosSection');
-  allVideosSection.style.display = 'block';
+const allVideosSection = document.getElementById('allVideosSection');
+const allVideosContainer = document.getElementById('allVideosContainer');
+
+// Clear previous results
+allVideosContainer.innerHTML = '';
+
+// Filter only movies (exclude series if needed)
+const moviesOnly = contentDatabase.filter(item => item.type === 'movie');
+
+// Sort A-Z and create video items
+moviesOnly.sort((a,b) => a.title.localeCompare(b.title))
+  .forEach(video => {
+    const videoItem = document.createElement('div');
+    videoItem.className = 'all-videos-item';
+    
+    // Get correct thumbnail URL
+    const thumbUrl = video.url.includes('youtube.com') 
+      ? `https://i.ytimg.com/vi/${video.url.split('/embed/')[1].split('?')[0]}/maxresdefault.jpg`
+      : 'https://via.placeholder.com/300x450?text=Movie';
+    
+    videoItem.innerHTML = `
+      <div class="thumbnail-container">
+        <img src="${thumbUrl}" alt="${video.title}" 
+             onerror="this.src='https://via.placeholder.com/300x450?text=No+Thumbnail'">
+        <div class="play-button"></div>
+      </div>
+      <div class="video-title">${video.title}</div>
+    `;
+    
+    videoItem.onclick = () => openModal(video.url, video.title);
+    allVideosContainer.appendChild(videoItem);
+  });
+
+// Show the section
+allVideosSection.style.display = 'block';
   
   // Populate videos if empty
   const container = document.getElementById('allVideosContainer');
