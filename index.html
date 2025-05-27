@@ -416,7 +416,12 @@
       background-color: rgba(255, 69, 0, 1);
     }
     
-    /* Content preview styles */
+<style>
+    /* [Your existing CSS above...] */
+
+    /* ======= TV SERIES ADDITIONS START ======= */
+    /* Enhanced Content Preview */
+/* Content preview styles */
     .content-preview {
       display: flex;
       flex-wrap: wrap;
@@ -493,6 +498,23 @@
       0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
     }
+
+    <div class="content-preview">
+  <!-- Existing Godfather of Harlem -->
+  <div class="preview-item" onclick="showSeasons('godfather', event)">
+    <!-- ... -->
+  </div>
+
+  <!-- Love is blind -->
+  <div class="preview-item" onclick="showSeasons('Love is blind', event)">
+    <div class="thumbnail-container" style="height: 250px;">
+      <img src="https://icecreamconvos.com/wp-content/uploads/2024/02/Love-Is-Blind-Season-6.jpeg" 
+           alt="Love is blind" class="preview-thumbnail">
+      <div class="play-button"></div>
+    </div>
+    <div class="preview-title">Love is blind</div>
+  </div>
+</div>
 
     /* Ad container styling */
     .ad-container {
@@ -583,6 +605,7 @@
   <div style="position: absolute; top: 10px; right: 10px; color: var(--secondary-color); font-size: 14px;">
     (Click anywhere to visit our channel)
   </div>
+  
   <h2>Movies from our YouTube channel (subscribe)</h2>
   <div class="carousel">
     <button class="carousel-control prev" onclick="event.stopPropagation(); moveCarousel(-1)">❮</button>
@@ -636,7 +659,7 @@
         <div class="video-container" onclick="event.stopPropagation(); openModal('https://www.youtube.com/embed/wkqKnmWbzLw?autoplay=1', 'Robbin (2024) Full Movie')">
           <div class="video-title">Robbin (2024) Full Movie</div>
           <div class="thumbnail-container">
-            <img src="https://i.ytimg.com/vi/wkqKnmWbzLw/maxresdefault.jpg" alt="Robbin thumbnail" onerror="this.src='https://via.placeholder.com/300x450?text=No+Thumbnail'">
+            <img src="https://m.media-amazon.com/images/M/MV5BMmU2MzY4YzEtYWI2Zi00ZGRhLWIxYjktMWI1NzViOGM0NWVkXkEyXkFqcGc@._V1_.jpg" alt="Robbin thumbnail" onerror="this.src='https://via.placeholder.com/300x450?text=No+Thumbnail'">
             <div class="play-button"></div>
           </div>
         </div>
@@ -645,7 +668,39 @@
     <button class="carousel-control next" onclick="event.stopPropagation(); moveCarousel(1)">❯</button>
   </div>
 </div>
-
+<!-- TV Series Section -->
+<div class="section">
+  <h2>Popular TV Series</h2>
+  <div class="content-preview">
+    <!-- Godfather of Harlem -->
+    <div class="preview-item" onclick="showSeasons('godfather', event)">
+      <div class="thumbnail-container" style="height: 250px;">
+        <img src="https://m.media-amazon.com/images/M/MV5BMTg4MWVjMjYtZGZhYS00MzlmLWFiYmItNDc1OGNmMzczZTM4XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" 
+             alt="Godfather of Harlem" class="preview-thumbnail">
+        <div class="play-button"></div>
+      </div>
+      <div class="preview-title">Godfather of Harlem</div>
+    </div>
+  </div>
+  
+  <!-- Seasons Modal -->
+  <div id="seasonsModal" class="modal">
+    <div class="modal-content" style="max-width: 800px;">
+      <span class="close" onclick="closeSeasonsModal()">&times;</span>
+      <h2 id="seriesTitle" style="color: var(--secondary-color);"></h2>
+      <div id="seasonsContainer" class="categories"></div>
+    </div>
+  </div>
+  
+  <!-- Episodes Modal -->
+  <div id="episodesModal" class="modal">
+    <div class="modal-content" style="max-width: 800px;">
+      <span class="close" onclick="closeEpisodesModal()">&times;</span>
+      <h2 id="seasonTitle" style="color: var(--secondary-color);"></h2>
+      <div id="episodesContainer" class="links" style="grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));"></div>
+    </div>
+  </div>
+</div>
  <!-- More Google Drive Videos -->
 <div class="section">
   <h2>TV Yami Movies</h2>
@@ -945,7 +1000,7 @@
 
   All content is hosted by third-party services
     
-© 2025 Amaculo. All rights reserved.
+© 2025 TV Yami All rights reserved.
   </footer>
 
   <script>
@@ -955,7 +1010,101 @@
       document.body.setAttribute('data-theme', 
         document.body.getAttribute('data-theme') === 'light' ? '' : 'light');
     });
+// TV Series Database - SINGLE declaration
+// TV Series Database
+const seriesDatabase = {
+  "godfather": {
+    title: "Godfather of Harlem",
+    poster: "https://m.media-amazon.com/images/M/MV5BZTk1NzQwYjYtOTFmYS00YzE0LWJjY2UtZDU4MGJiNGQ0ZmY5XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg",
+    description: "The story of crime boss Bumpy Johnson, who in the early 1960s returned from prison to find his neighborhood controlled by the Italian mob.",
+    seasons: {
+      "1": {
+        episodes: {
+          "1": {
+            title: "By Whatever Means Necessary",
+            url: "https://drive.google.com/file/d/1M_6-NJf8yGqKLcphkelnRoKLvxD1K1H-/preview",
+            thumbnail: "https://m.media-amazon.com/images/M/MV5BNzU5Yzk1ODktNzA3OS00YzQ0LWI5YzItYzhlODQ2NThjYjFkXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg"
+          },
+          "2": {
+            title: "The Nitty Gritty",
+            url: "https://drive.google.com/file/d/1M_6-NJf8yGqKLcphkelnRoKLvxD1K1H-/preview",
+            thumbnail: "https://m.media-amazon.com/images/M/MV5BNzU5Yzk1ODktNzA3OS00YzQ0LWI5YzItYzhlODQ2NThjYjFkXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg"
+          }
+          // Add more episodes as needed
+        }
+      }
+      // Add more seasons as needed
+    }
+  }
+  // Add more series as needed
+};
 
+// Series functions
+function showSeasons(seriesId) {
+  const series = seriesDatabase[seriesId];
+  document.getElementById('seriesTitle').textContent = series.title;
+  
+  const seasonsContainer = document.getElementById('seasonsContainer');
+  seasonsContainer.innerHTML = '';
+  
+  // Create season buttons
+  for (const seasonNum in series.seasons) {
+    const seasonBtn = document.createElement('button');
+    seasonBtn.className = 'category';
+    seasonBtn.textContent = `Season ${seasonNum}`;
+    seasonBtn.onclick = (e) => {
+      e.stopPropagation();
+      showEpisodes(seriesId, seasonNum);
+    };
+    seasonsContainer.appendChild(seasonBtn);
+  }
+  
+  document.getElementById('seasonsModal').style.display = 'block';
+  document.body.style.overflow = 'hidden';
+}
+
+function showEpisodes(seriesId, seasonNum) {
+  const series = seriesDatabase[seriesId];
+  const season = series.seasons[seasonNum];
+  
+  document.getElementById('seasonTitle').textContent = `${series.title} - Season ${seasonNum}`;
+  
+  const episodesContainer = document.getElementById('episodesContainer');
+  episodesContainer.innerHTML = '';
+  
+  // Create episode list
+  for (const episodeNum in season.episodes) {
+    const episode = season.episodes[episodeNum];
+    const episodeItem = document.createElement('div');
+    episodeItem.className = 'episode-item';
+    episodeItem.innerHTML = `
+      <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
+        <img src="${episode.thumbnail}" alt="${episode.title}" 
+             style="width: 120px; height: 70px; object-fit: cover; border-radius: 5px;">
+        <div>
+          <h4 style="margin: 0; color: var(--secondary-color);">Episode ${episodeNum}: ${episode.title}</h4>
+          <button onclick="openModal('${episode.url}', '${series.title} S${seasonNum}E${episodeNum}')" 
+                  style="background: var(--primary-color); color: white; border: none; padding: 5px 10px; border-radius: 3px; cursor: pointer;">
+            Watch Now
+          </button>
+        </div>
+      </div>
+    `;
+    episodesContainer.appendChild(episodeItem);
+  }
+  
+  closeSeasonsModal();
+  document.getElementById('episodesModal').style.display = 'block';
+}
+
+function closeSeasonsModal() {
+  document.getElementById('seasonsModal').style.display = 'none';
+}
+
+function closeEpisodesModal() {
+  document.getElementById('episodesModal').style.display = 'none';
+  document.body.style.overflow = 'auto';
+}
     // Content database for search
   const contentDatabase = [
   // Google Drive Movies (with corrected titles)
