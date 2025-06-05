@@ -455,6 +455,27 @@
       color: var(--secondary-color);
     }
 
+    /* PAGINATION STYLES (paste in style section) */
+.pagination {
+  margin: 30px auto;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.page-btn {
+  background: var(--card-bg);
+  color: var(--text-color);
+  border: 1px solid var(--primary-color);
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.page-btn:hover, .page-btn.active {
+  background: var(--primary-color);
+  color: white;
+}
+
     /* Social Ad Styling */
     .social-ad {
       background: var(--card-bg);
@@ -571,6 +592,12 @@
   <div class="section">
     <h2>Featured Movies</h2>
     <div class="video-section">
+      <!-- PAGINATION CONTROLS (paste right after video-section) -->
+<div class="pagination" style="margin: 20px auto; text-align: center;">
+  <button class="page-btn active" onclick="showPage(1)">1</button>
+  <button class="page-btn" onclick="showPage(2)">2</button>
+  <!-- Add more buttons if you have >20 movies -->
+</div>
       <div class="video-container" onclick="openModal('https://drive.google.com/file/d/1dTaQmZm-4VXGnZIHEsCKAJoZxqe9iHob/preview', 'The Fast and the Furious (2001)')">
         <div class="video-title">The Fast and the Furious (2001)</div>
         <div class="thumbnail-container">
@@ -1614,6 +1641,33 @@ allVideosSection.style.display = 'block';
       });
   }
 }
+    // PAGINATION SYSTEM (paste near end of script tag)
+let currentPage = 1;
+const moviesPerPage = 10;
+
+function showPage(page) {
+  currentPage = page;
+  const allVideos = document.querySelectorAll('.video-container');
+  
+  // Hide all videos
+  allVideos.forEach(video => video.style.display = 'none');
+  
+  // Show videos for current page
+  const startIdx = (page - 1) * moviesPerPage;
+  const endIdx = startIdx + moviesPerPage;
+  
+  for (let i = startIdx; i < endIdx && i < allVideos.length; i++) {
+    allVideos[i].style.display = 'block';
+  }
+  
+  // Update active button
+  document.querySelectorAll('.page-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.textContent == page);
+  });
+}
+
+// Initialize first page
+window.addEventListener('load', () => showPage(1));
   </script>
 </body>
 </html>
