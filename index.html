@@ -454,27 +454,7 @@
       font-size: 16px;
       color: var(--secondary-color);
     }
-    
-/* Pagination Styles */
-.pagination {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 30px;
-}
-.page-btn {
-  background: var(--card-bg);
-  color: var(--text-color);
-  border: 1px solid var(--primary-color);
-  padding: 8px 15px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-.page-btn:hover, .page-btn.active {
-  background: var(--primary-color);
-  color: white;
-}
+
     /* Social Ad Styling */
     .social-ad {
       background: var(--card-bg);
@@ -725,30 +705,10 @@
     </div>
   </div>
 </div>
-<!-- Main Movies Section with Pagination -->
+ <!-- More Google Drive Videos -->
 <div class="section">
   <h2>TV Yami Movies</h2>
-  
-  <!-- Movie Grid -->
-  <div class="video-section" id="main-movie-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;">
-    <!-- All your movie containers stay exactly the same -->
-    <div class="video-container" onclick="openModal('...', '...')">
-      <div class="thumbnail-container">
-        <img src="..." alt="American Fiction" style="width:100%">
-        <div class="play-button"></div>
-      </div>
-      <div class="video-title">American Fiction (2023)</div>
-    </div>
-    <!-- Keep all other movie containers -->
-  </div>
-
-  <!-- Pagination Controls -->
-  <div class="pagination" style="margin: 30px auto; text-align: center;">
-    <button class="page-btn active" onclick="showPage(1)">1</button>
-    <button class="page-btn" onclick="showPage(2)">2</button>
-    <button class="page-btn" onclick="showPage(3)">3</button>
-  </div>
-</div>
+  <div class="video-section" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;">
 
     <!-- Row 1 -->
     <div class="video-container" onclick="openModal('https://drive.google.com/file/d/1DYLjdSdqLmFj9vlgjJXldQ0aPXskTFyE/preview', 'American Fiction (2023)')">
@@ -1654,44 +1614,6 @@ allVideosSection.style.display = 'block';
       });
   }
 }
-    // Pagination System for Main Movies
-let currentPage = 1;
-const moviesPerPage = 8; // Shows 8 movies per page (2 rows of 4)
-
-function showPage(page) {
-  currentPage = page;
-  const allMovies = document.querySelectorAll('#main-movie-grid .video-container');
-  
-  // Hide all movies
-  allMovies.forEach(movie => movie.style.display = 'none');
-  
-  // Show movies for current page
-  const startIdx = (page - 1) * moviesPerPage;
-  const endIdx = startIdx + moviesPerPage;
-  
-  for (let i = startIdx; i < endIdx && i < allMovies.length; i++) {
-    allMovies[i].style.display = 'block';
-  }
-  
-  // Update active button
-  document.querySelectorAll('.page-btn').forEach(btn => {
-    btn.classList.toggle('active', Number(btn.textContent) === page);
-  });
-}
-
-// Initialize first page
-window.addEventListener('load', () => {
-  showPage(1);
-  
-  // Auto-calculate pages needed
-  const totalMovies = document.querySelectorAll('#main-movie-grid .video-container').length;
-  const totalPages = Math.ceil(totalMovies / moviesPerPage);
-  
-  // Only show needed buttons
-  document.querySelectorAll('.page-btn').forEach((btn, i) => {
-    btn.style.display = (i < totalPages) ? 'block' : 'none';
-  });
-});
   </script>
 </body>
 </html>
